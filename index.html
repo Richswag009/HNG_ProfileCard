@@ -12,27 +12,37 @@
   <body>
     <main>
       <div class="card">
+        <h1 data-testid="slackUserName">Riches Metelewawon</h2>
+
         <img
-          src="./assets/riches.jpg"
+          src="assets/riches.jpg"
           alt="Riches Metelewawon"
           data-testid="slackDisplayImage"
         />
-        <div class="card__title">
-          <h2 data-testid="slackUserName">Riches Metelewawon</h2>
-          <p data-testid="myTrack">Frontend</p>
+
+        <div class="card__time">
+          <p>
+            Day :
+            <span
+              id="currentDayOfTheWeek"
+              data-testid="currentDayOfTheWeek"
+            ></span>
+          </p>
+          <p>
+            Time :
+            <span id="currentUTCTime" data-testid="currentUTCTime"> </span>
+          </p>
         </div>
-        <div class="base">
-            <p> Day : <span id="currentDayOfTheWeek" data-testid="currentDayOfTheWeek"></span></p>
-            <p> Time : 
-              <span id="currentUTCTime" data-testid="currentUTCTime">
-            </p>
-          </span>
-          <button>
-            <a href="https://github.com/Richswag009/HNG_ProfileCard" target="_blank" data-testid="githubURL"
+
+        <p class="track" data-testid="myTrack">Frontend</p>
+        <button>
+          <a
+            href="https://github.com/Richswag009/HNG_ProfileCard"
+            target="_blank"
+            data-testid="githubURL"
             >GitHub Repository</a
-            >
-          </button>
-        </div>
+          >
+        </button>
       </div>
     </main>
     <script src="app.js"></script>

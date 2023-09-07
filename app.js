@@ -1,8 +1,6 @@
 const currentDay = document.getElementById("currentDayOfTheWeek");
 const currentUTCTime = document.getElementById("currentUTCTime");
 const date = new Date();
-let dayNumber = date.getDay();
-// let dayTime = date.getTime();
 const daysOfWeek = [
   "Sunday",
   "Monday",
@@ -12,19 +10,21 @@ const daysOfWeek = [
   "Friday",
   "Saturday",
 ];
-const currentDayOfTheWeek = daysOfWeek[dayNumber];
-currentDay.innerHTML = currentDayOfTheWeek;
+currentDay.innerHTML = daysOfWeek[date.getDay()];
 
 const currentUTCTimeInMilliseconds = new Date().getTime();
 const dayTime = new Date(currentUTCTimeInMilliseconds);
 const hours = dayTime.getUTCHours();
 const minutes = dayTime.getUTCMinutes();
 const seconds = dayTime.getUTCSeconds();
+const milliseconds = dayTime.getUTCMilliseconds();
 
-// Create a formatted string
-const formattedTime = `${hours.toString().padStart(2, "0")}:${minutes
+const formattedTime = `${(hours + 1).toString().padStart(2, "0")}:${minutes
   .toString()
-  .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
-
-// console.log(formattedDate);
+  .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}:${milliseconds
+  .toString()
+  .padStart(2, "0")}`;
+console.log(formattedTime);
 currentUTCTime.innerHTML = formattedTime;
+
+
