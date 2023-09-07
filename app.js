@@ -2,8 +2,6 @@ const currentDay = document.getElementById("currentDayOfTheWeek");
 const currentUTCTime = document.getElementById("currentUTCTime");
 const date = new Date();
 let dayNumber = date.getDay();
-let time = date.getTime();
-console.log(time);
 // let dayTime = date.getTime();
 const daysOfWeek = [
   "Sunday",
