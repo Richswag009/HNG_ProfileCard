@@ -1,4 +1,6 @@
 const currentUTCTime = document.getElementById("currentUTCTime");
+const currentUTCTimeInMilliseconds = Date.now().toString();
+currentUTCTime.textContent = currentUTCTimeInMilliseconds;
 
 // const currentUTCTimeInMilliseconds = new Date().getTime();
 // const dayTime = new Date(currentUTCTimeInMilliseconds);
@@ -14,5 +16,3 @@ const currentUTCTime = document.getElementById("currentUTCTime");
 //   .toString()
 //   .padStart(2, "0")}`;
 // console.log(formattedTime);
-const currentUTCTimeInMilliseconds = Date.now().toString();
-currentUTCTime.textContent = currentUTCTimeInMilliseconds;
